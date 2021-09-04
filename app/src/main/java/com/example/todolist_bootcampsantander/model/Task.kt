@@ -1,10 +1,15 @@
 package com.example.todolist_bootcampsantander.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class Task(
+    @PrimaryKey val id: Int = 0,
     val title: String,
     val hour: String,
-    val date: String,
-    val id: Int = 0
+    val date: String
+
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
